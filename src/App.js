@@ -11,7 +11,7 @@ import Project2 from "./components/Projects/Project2"
 import Project3 from "./components/Projects/Project3"
 import Project4 from "./components/Projects/Project4"
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes,
   Navigate
@@ -33,7 +33,7 @@ function App() {
   }, []);
 
   return (
-    <Router basename="/my-website">
+    <Router >
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
